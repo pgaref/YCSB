@@ -20,6 +20,25 @@ Yahoo! Cloud System Benchmark (YCSB)
 ====================================
 [![Build Status](https://travis-ci.org/brianfrankcooper/YCSB.png?branch=master)](https://travis-ci.org/brianfrankcooper/YCSB)
 
+
+### Custom Hadoop-2.7.2-MEDEA version with HBASE-1.2.3
+**Medea** compatibility
+Build Command:
+
+    mvn -pl com.yahoo.ycsb:hbase10-binding -am clean package
+
+Configure:
+    
+    ./deploy.sh -slider-hbase-client # From deployment machine
+    ./yarn-dev-panos/hbase_client/bin/hbase shell
+    n_splits = 200 # HBase recommends (10 * number of regionservers)
+    create 'usertable', 'cf', {SPLITS => (1..n_splits).map {|i| "user#{1000+i*(9999-1000)/n_splits}"}}
+
+Run Workload:
+    
+    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family
+    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family
+
 Links
 -----
 http://wiki.github.com/brianfrankcooper/YCSB/  
