@@ -32,12 +32,12 @@ Configure:
     ./deploy.sh -slider-hbase-client # From deployment machine
     ./yarn-dev-panos/hbase_client/bin/hbase shell
     n_splits = 200 # HBase recommends (10 * number of regionservers)
-    create 'usertable', 'cf', {SPLITS => (1..n_splits).map {|i| "user#{1000+i*(9999-1000)/n_splits}"}}
+    create 'usertable', 'family', {SPLITS => (1..n_splits).map {|i| "user#{1000+i*(9999-1000)/n_splits}"}}
 
 Run Workload:
     
-    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family
-    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family
+    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family -s
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/no-isolation/write-wA-1R.dat > ./results/no-isolation/write-wA-1R-sum.dat
 
 Links
 -----
