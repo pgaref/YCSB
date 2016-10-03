@@ -36,8 +36,14 @@ Configure:
 
 Run Workload:
     
-    bin/ycsb load hbase -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family -s
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/no-isolation/write-wA-1R.dat > ./results/no-isolation/write-wA-1R-sum.dat
+    bin/ycsb load hbase10 -P workloads/workloada -cp /HBASE-HOME-DIR/conf -p table=usertable -p columnfamily=family -s
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wA-1R.dat > ./results/yarn/write-wA-1R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloadb -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wB-1R.dat > ./results/yarn/write-wB-1R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wC-1R.dat > ./results/yarn/write-wC-1R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wD-1R.dat > ./results/yarn/write-wD-1R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wE-1R.dat > ./results/yarn/write-wE-1R-sum.dat ; \ 
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn/write-wF-1R.dat > ./results/yarn/write-wF-1R-sum.dat
+
 
 Links
 -----
