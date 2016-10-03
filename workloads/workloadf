@@ -22,7 +22,8 @@
 #   Request distribution: zipfian
 
 recordcount=100000000
-operationcount=100000000
+# The number of operations to use during the run phase. 1G data
+operationcount=1000000
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 
 readallfields=true
