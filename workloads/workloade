@@ -29,8 +29,8 @@
 #########################################################################
 ##  Threaded conversations, where each scan is for the posts in a given thread (assumed to be clustered by thread id)
 
-recordcount=1000000
-operationcount=1000000
+recordcount=100000000
+operationcount=100000000
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 
 readallfields=true

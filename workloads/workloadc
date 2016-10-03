@@ -24,8 +24,8 @@
 ##  User profile cache, where profiles are constructed elsewhere (e.g., Hadoop)
 
 
-recordcount=1000000
-operationcount=1000000
+recordcount=100000000
+operationcount=100000000
 workload=com.yahoo.ycsb.workloads.CoreWorkload
 
 readallfields=true
