@@ -36,13 +36,13 @@ Configure:
 
 Run Workload:
     
-    bin/ycsb load hbase10 -P workloads/workloada -p table=usertable -p columnfamily=family -threads 512 -s
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wA-10R.dat > ./results/yarn-colocated/write-wA-1R-sum.dat ; \
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloadb -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wB-10R.dat > ./results/yarn-colocated/write-wB-1R-sum.dat ; \
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wC-10R.dat > ./results/yarn-colocated/write-wC-1R-sum.dat ; \
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wD-10R.dat > ./results/yarn-colocated/write-wD-1R-sum.dat ; \
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wE-10R.dat > ./results/yarn-colocated/write-wE-1R-sum.dat ; \ 
-    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-colocated/write-wF-10R.dat > ./results/yarn-colocated/write-wF-1R-sum.dat
+    bin/ycsb load hbase10 -P workloads/workloada -p table=usertable -p columnfamily=family -threads 512 -s ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wA-10R.dat > ./results/yarn-medea/write-wA-10R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloadb -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wB-10R.dat > ./results/yarn-medea/write-wB-10R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wC-10R.dat > ./results/yarn-medea/write-wC-10R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wD-10R.dat > ./results/yarn-medea/write-wD-10R-sum.dat ; \
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wE-10R.dat > ./results/yarn-medea/write-wE-10R-sum.dat ; \ 
+    bin/ycsb run hbase10 -p table=usertable -p columnfamily=family -threads 256 -P workloads/workloada -p measurementtype=raw -s -p measurement.raw.output_file=./results/yarn-medea/write-wF-10R.dat > ./results/yarn-medea/write-wF-10R-sum.dat
 
 
 Links
