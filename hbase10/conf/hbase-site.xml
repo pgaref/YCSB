@@ -31,7 +31,7 @@
 
 <property>
 	<name>zookeeper.znode.parent</name>
-	<value>/services/slider/users/pg1712/hbcl1</value>
+	<value>/services/slider/users/hadoop/hbcl1</value>
 	<source>hbase-site.xml</source>
 </property>
 
