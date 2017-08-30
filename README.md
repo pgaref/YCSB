@@ -21,8 +21,7 @@ Yahoo! Cloud System Benchmark (YCSB)
 [![Build Status](https://travis-ci.org/brianfrankcooper/YCSB.png?branch=master)](https://travis-ci.org/brianfrankcooper/YCSB)
 
 
-### Custom Hadoop-2.7.2-MEDEA version with HBASE-1.2.3
-**Medea** compatibility
+### Custom Hadoop-2.7.1.2 version with HBASE-1.2.3
 Build Command:
 
     mvn -pl com.yahoo.ycsb:hbase10-binding -am clean package

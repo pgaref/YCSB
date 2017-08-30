@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><configuration>
 <property>
 	<name>hbase.zookeeper.quorum</name>
-	<value>wombat30</value>
+	<value>cisl-linux-090</value>
 	<source>hbase-site.xml</source>
 </property>
 
